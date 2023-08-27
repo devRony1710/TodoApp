@@ -1,5 +1,9 @@
 import React from "react";
 
-export const TodoCounter = () => {
-  return <h1>Has Completado 3 de 5 TODOs</h1>;
+export const TodoCounter = ({ totalTodos, completedTodos }) => {
+  return (
+    <h1 className="text-[#DAFFFB] font-bold text-xl">
+      Has Completado {completedTodos} de {totalTodos} TODOs
+    </h1>
+  );
 };
