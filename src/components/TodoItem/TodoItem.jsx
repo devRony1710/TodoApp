@@ -1,6 +1,8 @@
 import React from "react";
 
 export const TodoItem = ({ title, completed }) => {
+  console.log("🚀 ~ file: TodoItem.jsx:4 ~ TodoItem ~ completed:", completed);
+
   return (
     <div className="w-full h-12 flex justify-between items-center border border-[#64CCC5] px-4 bg-[#176B87] rounded">
       <p className="flex flex-1 text-white">{title}</p>
