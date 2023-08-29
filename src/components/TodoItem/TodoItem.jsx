@@ -1,15 +1,22 @@
 import React from "react";
 
-export const TodoItem = ({ title, completed }) => {
-  console.log("🚀 ~ file: TodoItem.jsx:4 ~ TodoItem ~ completed:", completed);
-
+export const TodoItem = ({ title, completed, markAsCompleted, deleteTodo }) => {
+  //TODO USAR EL COMPLETED
   return (
-    <div className="w-full h-12 flex justify-between items-center border border-[#64CCC5] px-4 bg-[#176B87] rounded">
+    <div
+      className={`${
+        completed ? "bg-[#3fcfff]" : "bg-[#176B87]"
+      } w-full h-12 flex justify-between items-center border border-[#64CCC5] px-4 rounded`}
+    >
       <p className="flex flex-1 text-white">{title}</p>
 
       <div className="flex gap-6 items-center justify-center">
-        <button type="button">V</button>
-        <button type="button">x</button>
+        <button type="button" onClick={markAsCompleted}>
+          V
+        </button>
+        <button type="button" onClick={deleteTodo}>
+          x
+        </button>
       </div>
     </div>
   );
